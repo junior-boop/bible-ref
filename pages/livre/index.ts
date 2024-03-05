@@ -534,11 +534,8 @@ const data = [
     }
 ]
 
-/**
- * 
- * @param {{ livre : string, chap : string, vers1 : string, vers2?: string}} param0 
- */
-export default function filtre ({ livre, chap, vers1, vers2 }){
+interface filter { livre : string, chap : string, vers1 : string, vers2?: string}
+export default function filtre ({ livre, chap, vers1, vers2 }: filter){
     let book = livre
     let chapt = parseInt(chap)
     let verset1 = parseInt(vers1)
